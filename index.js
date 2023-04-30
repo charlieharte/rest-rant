@@ -3,10 +3,13 @@ const express = require('express')
 require('dotenv').config()
 const app = express()
 
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
+
 app.use('/places', require('./controllers/places'))
 
 app.get('/', (req,res) => {
-  res.send('Hello World')
+  res.render('home')
 })
 
 app.get('/second', (req,res) => {
