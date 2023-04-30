@@ -1,10 +1,9 @@
 //require needed modules
 const express = require('express')
+require('dotenv').config()
 
-//initialize the app object
 const app = express()
 
-//create homepage route
 app.get('/', (req,res) => {
   res.send('Hello World')
 })
@@ -13,6 +12,11 @@ app.get('/second', (req,res) => {
   res.send('My Second Page!')
 })
 
-const PORT = process.env.PORT || 3000
+app.get('*', (req,res) => {
+  res.status(404).send('<h1>404 Page</h1>')
+})
 
-app.listen(PORT, console.log(`listening on port ${PORT}`))
+// const PORT = process.env.PORT || 3000
+
+app.listen(process.env.PORT)
+// app.listen(PORT, console.log(`listening on port ${PORT}`))
