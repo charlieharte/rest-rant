@@ -1,4 +1,4 @@
-h1 {
+h1, p {
   text-align: center;
   color: cornflowerblue;
 }
@@ -7,4 +7,30 @@ h1 {
   background-color: cornflowerblue;
   color: whitesmoke;
   border-color: whitesmoke;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#pizza img {
+  border-radius: 1em;
+  width: 30em;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#toast img {
+  width: 30em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img[src='/images/tarantellis.jpg'] {
+  width: 30em
+}
+
+img[src='/images/szechuan132.jpg']{
+  width: 30em
 }
